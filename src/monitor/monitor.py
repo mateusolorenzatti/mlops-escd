@@ -11,10 +11,10 @@ def check_for_drift(drift_score, drift_by_columns):
     num_columns_drift = sum(1 for col, values in drift_by_columns.items() if values.get("drift_detected", False))
     if drift_score > 0.5:
         print("Drift detectado no Dataset")
-        os.system("python3 churn.py")
+        os.system("python3 ../models/diabetes.py")
     elif num_columns_drift > 2:
         print(f"Drift detectado em {num_columns_drift} colunas! Treinando novo modelo...")
-        os.system("python3 churn.py")
+        os.system("python3 ../models/diabetes.py")
     else:
         print("Modelo ainda está bom, sem necessidade de re-treinamento.")
 

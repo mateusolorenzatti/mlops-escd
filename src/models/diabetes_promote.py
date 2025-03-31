@@ -1,7 +1,7 @@
 import mlflow
 from mlflow.tracking import MlflowClient
 
-client = MlflowClient(tracking_uri="sqlite:///../../mlflow.db")  # Ajustando o caminho correto
+client = MlflowClient(tracking_uri="sqlite:///../../mlflow.db")
 
 staging_threshold = 0.56 
 
